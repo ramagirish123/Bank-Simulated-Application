@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="EnvDTEProperties90A.dll">
+      <Guid>dbe64193-83fe-4c06-a6b1-619ef0a25c40</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Core.System.Configuration.Install" Version="1.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BankApplication.Data\BankApplication.Data.csproj" />
+    <ProjectReference Include="..\BankApplication.Models\BankApplication.Models.csproj" />
+    <ProjectReference Include="..\BankApplication.Services\BankApplication.Services.csproj" />
+  </ItemGroup>
+
+</Project>
